@@ -40,7 +40,9 @@ To get more help on the Angular CLI use `ng help` or go check out the [Angular C
 	ng serve
 7. install bootstrap
 	npm i bootstrap
+8. Add Component  [create a folder "components" in src/app then come in that folder]
+	ng generate component addEmployee   || ng g c addEmployee
 
 ## Study Points
-https://www.youtube.com/watch?v=uhFFNQSbBx8&list=PL7JmcZV0UQtUxsHS8dF3EINHdoIvRS6Ft&index=2
-10:56
+https://www.youtube.com/watch?v=6axfJtFWsiQ&list=PL7JmcZV0UQtUxsHS8dF3EINHdoIvRS6Ft&index=4
+0.00
