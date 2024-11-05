@@ -26,6 +26,21 @@ Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To u
 
 To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.dev/tools/cli) page.
 
+## Required Commonds
+
+1. node must install
+2. npm must install
+3. For Angular CLI install Global
+	npm install -g @angular/cli
+4. check angular version
+	ng v
+5. Create Project
+       ng new angular-18-first
+6. Project run
+	ng serve
+7. install bootstrap
+	npm i bootstrap
 
 ## Study Points
-https://www.youtube.com/watch?v=FDIj5Vklnlc&list=PL7JmcZV0UQtUxsHS8dF3EINHdoIvRS6Ft
+https://www.youtube.com/watch?v=uhFFNQSbBx8&list=PL7JmcZV0UQtUxsHS8dF3EINHdoIvRS6Ft&index=2
+10:56
