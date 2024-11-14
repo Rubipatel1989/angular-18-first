@@ -1,1 +1,48 @@
-<app-attribute-directive></app-attribute-directive>
+<nav class="navbar navbar-expand-sm navbar-dark bg-dark">
+  <div class="container-fluid">
+    <a class="navbar-brand" href="javascript:void(0)">Logo</a>
+    <button
+      class="navbar-toggler"
+      type="button"
+      data-bs-toggle="collapse"
+      data-bs-target="#mynavbar"
+    >
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="mynavbar">
+      <ul class="navbar-nav me-auto">
+        <li class="nav-item" style="margin-top: -12px">
+          <a class="nav-link active" routerLink="/login">Login</a>
+        </li>
+        <li class="nav-item" style="margin-top: -12px">
+          <a class="nav-link active" routerLink="/register">Register</a>
+        </li>
+
+        <li class="nav-item" style="margin-top: -12px">
+          <a class="nav-link" routerLink="structural-dir"
+            >Structural Directive</a
+          >
+        </li>
+        <li class="nav-item" style="margin-top: -12px">
+          <a class="nav-link" routerLink="attributedirective"
+            >Attribute Directive</a
+          >
+        </li>
+        <li class="nav-item" style="margin-top: -12px">
+          <a class="nav-link" routerLink="pipe">Pipe</a>
+        </li>
+        <!-- <li class="nav-item" style="margin-top: -12px">
+          <a class="nav-link" routerLink="get-users">API-Http Client</a>
+        </li> -->
+      </ul>
+      <form class="d-flex">
+        <input class="form-control me-2" type="text" placeholder="Search" />
+        <button class="btn btn-primary" type="button">Search</button>
+      </form>
+    </div>
+  </div>
+</nav>
+
+<div class="container">
+  <router-outlet> </router-outlet>
+</div>

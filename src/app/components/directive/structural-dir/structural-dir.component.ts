@@ -1,11 +1,12 @@
 import { CommonModule } from '@angular/common';
 import { Component } from '@angular/core';
 import { FormsModule } from '@angular/forms';
+import { Router, RouterLink } from '@angular/router';
 
 @Component({
   selector: 'app-structural-dir',
   standalone: true,
-  imports: [CommonModule, FormsModule],
+  imports: [CommonModule, FormsModule, RouterLink],
   templateUrl: './structural-dir.component.html',
   styleUrl: './structural-dir.component.css'
 })
@@ -19,6 +20,10 @@ export class StructuralDirComponent {
   isActive: Boolean = false;
   selectedState: String = "";
 
+  constructor(private router:Router){
+
+  }
+
   cityArray: String[] = ['Kanpur', 'Noida', 'Lucknow', 'Fatehpur', 'Banda'];
   studentList: any[] = [
     { studId: 1, name: "Pawan Kumar", city: "Sainik Nagar", district: "Kanpur", isActive: false },
@@ -27,7 +32,9 @@ export class StructuralDirComponent {
     { studId: 4, name: "Pramod Kumar", city: "Kausabhi Nagar", district: "Kanpur", isActive: false },
     { studId: 5, name: "Raja Kumar", city: "Etawa Nagar", district: "Kanpur", isActive: true }
   ];
-
+  navigateToAttribute() {
+    this.router.navigateByUrl("attributedirective");
+  }
   showDiv1() {
     this.isDiv1Visiable = true;
   }

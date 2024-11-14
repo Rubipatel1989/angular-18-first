@@ -44,5 +44,5 @@ To get more help on the Angular CLI use `ng help` or go check out the [Angular C
 	ng generate component addEmployee   || ng g c addEmployee
 
 ## Study Points
-https://www.youtube.com/watch?v=LNihtMURAg0
-01:10
+https://www.youtube.com/watch?v=IXcMAHdJy3o
+15:35

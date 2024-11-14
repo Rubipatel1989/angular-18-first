@@ -1,0 +1,47 @@
+<div class="container" #formContainer>
+  <h2>Login</h2>
+  <form #loginForm="ngForm" (ngSubmit)="onLogin()" novalidate>
+
+    <!-- Email Field with Required and Email Validation -->
+    <div class="form-group">
+      <label for="email">Email:</label>
+      <input
+        type="email"
+        class="form-control"
+        [(ngModel)]="email"
+        name="email"
+        #emailField="ngModel"
+        required
+        email
+      />
+      <div class="text-danger" *ngIf="emailField.invalid && emailField.touched">
+        <span *ngIf="emailField.errors?.['required']">Email is required.</span>
+        <span *ngIf="emailField.errors?.['email']">Invalid email format.</span>
+      </div>
+    </div>
+
+    <!-- Password Field with Required Validation -->
+    <div class="form-group">
+      <label for="password">Password:</label>
+      <input
+        type="password"
+        class="form-control"
+        [(ngModel)]="password"
+        name="password"
+        #passwordField="ngModel"
+        required
+      />
+      <div class="text-danger" *ngIf="passwordField.invalid && passwordField.touched">
+        <span *ngIf="passwordField.errors?.['required']">Password is required.</span>
+      </div>
+    </div>
+
+    <!-- Login Button with GSAP Animation -->
+    <div class="mt-5">
+      <button type="submit" class="btn btn-primary" [disabled]="loginForm.invalid">Login</button>
+    </div>
+  </form>
+
+  <!-- Display Form Value for Debugging -->
+  <div>{{ formValue | json }}</div>
+</div>
