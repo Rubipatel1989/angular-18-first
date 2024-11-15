@@ -39,10 +39,16 @@ To get more help on the Angular CLI use `ng help` or go check out the [Angular C
 6. Project run
 	ng serve
 7. install bootstrap
-	npm i bootstrap
+	npm i bootstrap gsap
 8. Add Component  [create a folder "components" in src/app then come in that folder]
-	ng generate component addEmployee   || ng g c addEmployee
+	ng generate component login   || ng g c login
+	ng generate component register
+	ng generate component addEmployee
+9. Open any other port 
+	ng s --port 4209
+	
 
 ## Study Points
-https://www.youtube.com/watch?v=IXcMAHdJy3o
-15:35
+
+https://www.youtube.com/watch?v=4NXdvUNXbT8&list=PL7JmcZV0UQtUxsHS8dF3EINHdoIvRS6Ft&index=15
+00:02:00

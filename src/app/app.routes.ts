@@ -8,6 +8,7 @@ import { LoginComponent } from './components/login/login.component';
 import { RegisterComponent } from './components/register/register.component';
 import { PipeComponent } from './pipe/pipe.component';
 import { GetApiComponent } from './components/api-integration/get-api/get-api.component';
+import { PostApiComponent } from './components/api-integration/post-api/post-api.component';
 export const routes: Routes = [
        {
               path: 'login',
@@ -42,9 +43,13 @@ export const routes: Routes = [
               component: PipeComponent
        },
        {
-              path: 'get-users',
+              path: 'get-api',
               component: GetApiComponent
 
        },
+       {
+              path: 'post-api',
+              component: PostApiComponent
+       }
       
 ];

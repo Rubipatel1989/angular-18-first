@@ -10,8 +10,9 @@ import { Component } from '@angular/core';
 })
 export class GetApiComponent {
   userList: any[] = [];
+  customerList: any[] = [];
   constructor(private http: HttpClient) {
-
+    //this.getAllUser();
   }
 
   getAllUser() {
@@ -20,6 +21,17 @@ export class GetApiComponent {
       //debugger;
       this.userList = result;
       console.log('Pawan', this.userList);
+    });
+  }
+
+  getAllCustomer() {
+    //debugger;
+    this.http.get("https://projectapi.gerasim.in/api/RealEstate/GetAllCustomers").subscribe((result: any) => {
+      //debugger;
+      this.customerList = result.data;
+      console.log('Kumar', this.customerList);
+    }, error => {
+      //debugger;
     });
   }
 }
