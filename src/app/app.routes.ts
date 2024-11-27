@@ -9,6 +9,7 @@ import { RegisterComponent } from './components/register/register.component';
 import { PipeComponent } from './pipe/pipe.component';
 import { GetApiComponent } from './components/api-integration/get-api/get-api.component';
 import { PostApiComponent } from './components/api-integration/post-api/post-api.component';
+import { LifecycleEventComponent } from './components/lifecycle-event/lifecycle-event.component';
 export const routes: Routes = [
        {
               path: 'login',
@@ -50,6 +51,10 @@ export const routes: Routes = [
        {
               path: 'post-api',
               component: PostApiComponent
+       },
+       {
+              path: 'life-cycle',
+              component: LifecycleEventComponent
        }
       
 ];

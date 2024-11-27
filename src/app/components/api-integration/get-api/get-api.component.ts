@@ -13,6 +13,7 @@ import { MyButtonComponent } from "../../../reusableComponent/my-button/my-butto
 export class GetApiComponent {
   userList: any[] = [];
   customerList: any[] = [];
+  alertMsg :String = 'This is Dummy Data';
   constructor(private http: HttpClient) {
     //this.getAllUser();
   }
@@ -35,5 +36,8 @@ export class GetApiComponent {
     }, error => {
       //debugger;
     });
+  }
+  changeMsg(){
+    this.alertMsg = 'This is Get API'
   }
 }
