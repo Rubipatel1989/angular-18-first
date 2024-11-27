@@ -13,9 +13,37 @@
        text-align: center;
        font-weight: bold;
      }
-     .form-section,
-     .table-section {
+     .form-section {
        padding: 20px;
        background-color: #f5f5f5;
        border-radius: 8px;
+       overflow-x: auto; 
      }
+
+     .table-section {
+      padding: 20px;
+       background-color: #f5f5f5;
+       border-radius: 8px;
+       overflow-x: auto; 
+    }
+    
+    table.table {
+      width: 100%; /* Ensures the table takes full width */
+      table-layout: fixed; /* Ensures columns are evenly spaced */
+    }
+    
+    table.table th,
+    table.table td {
+      white-space: nowrap; /* Prevents text from wrapping to the next line */
+      text-align: center; /* Centers text in cells */
+    }
+    
+    table.table th {
+      background-color: #f2f2f2; /* Light gray header background for readability */
+      font-weight: bold; /* Makes header text bold */
+    }
+    
+    table.table td {
+      vertical-align: middle; /* Vertically centers content in cells */
+    }
+    

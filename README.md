@@ -46,9 +46,11 @@ To get more help on the Angular CLI use `ng help` or go check out the [Angular C
 	ng generate component addEmployee
 9. Open any other port 
 	ng s --port 4209
+10. Create Service
+	ng g s department
 	
 
 ## Study Points
 
-https://www.youtube.com/watch?v=4NXdvUNXbT8&list=PL7JmcZV0UQtUxsHS8dF3EINHdoIvRS6Ft&index=15
-00:02:00
+https://www.youtube.com/watch?v=6g5gZWaLGUk&list=PL7JmcZV0UQtUxsHS8dF3EINHdoIvRS6Ft&index=17
+14:00
