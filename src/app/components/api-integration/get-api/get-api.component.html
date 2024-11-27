@@ -5,10 +5,11 @@
     Get User, Get Customer
   </div>
 
- 
-  <app-alert [message]="'Welcome in Get API'" [alertType]="'Warning'"/>
-  <hr/>
-  <app-alert [message]="'Welcome in Error  API'" [alertType]="'Error'"/>
+  <app-alert [message]="'Welcome in Get API'" [alertType]="'Warning'" />
+  <hr />
+  <app-alert [message]="'Welcome in Error  API'" [alertType]="'Error'" />
+  <hr />
+  <app-my-button [btnText]="'Get Data'" [btnClass]="'btn btn-danger'" />
   <div class="row mt-4">
     <div class="col-2">
       <button class="btn btn-success" (click)="getAllUser()">Get Data</button>

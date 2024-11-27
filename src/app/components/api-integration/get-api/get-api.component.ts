@@ -1,11 +1,12 @@
 import { HttpClient } from '@angular/common/http';
 import { Component } from '@angular/core';
 import { AlertComponent } from '../../../reusableComponent/alert/alert.component';
+import { MyButtonComponent } from "../../../reusableComponent/my-button/my-button.component";
 
 @Component({
   selector: 'app-get-api',
   standalone: true,
-  imports: [AlertComponent],
+  imports: [AlertComponent, MyButtonComponent],
   templateUrl: './get-api.component.html',
   styleUrl: './get-api.component.css'
 })

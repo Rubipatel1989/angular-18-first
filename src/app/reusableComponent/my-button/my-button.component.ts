@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, EventEmitter, Input, Output } from '@angular/core';
 
 @Component({
   selector: 'app-my-button',
@@ -8,5 +8,10 @@ import { Component } from '@angular/core';
   styleUrl: './my-button.component.css'
 })
 export class MyButtonComponent {
-
+  @Input() btnText: String = '';
+  @Input() btnClass: String = '';
+  @Output() onBtnClick = new EventEmitter<any>();
+  onClick() {
+    this.onBtnClick.emit('Hi I am from child');
+  }
 }

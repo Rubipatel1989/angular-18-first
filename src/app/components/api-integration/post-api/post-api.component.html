@@ -6,6 +6,7 @@
   </div>
 
   <app-alert message="Welcome To Post Page" alertType="Success"/>
+  <app-my-button (onBtnClick)="getData($event)" btnText = 'Welcome' [btnClass]="'btn btn-success'"/>
   <!-- Content Section -->
   <div class="row mt-4">
     <!-- Table Section -->
@@ -37,13 +38,15 @@
                 >
                   <i class="fas fa-edit"></i>
                 </button>
-                <button
+                <!-- <button
                   class="btn btn-danger"
                   (click)="onDelete(item.departmentId)"
                   title="Delete"
                 >
                   <i class="fas fa-trash"></i>
-                </button>
+                </button> -->
+                <app-my-button (onBtnClick)="onDelete(item.departmentId)" btnText = 'Delete' [btnClass]="'btn btn-danger'"/>
+  
               </td>
             </tr>
           </tbody>

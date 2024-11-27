@@ -5,10 +5,11 @@ import { FormsModule } from '@angular/forms';
 import gsap from 'gsap';
 import { DepartmentService } from '../../../service/department.service';
 import { AlertComponent } from '../../../reusableComponent/alert/alert.component';
+import { MyButtonComponent } from "../../../reusableComponent/my-button/my-button.component";
 @Component({
   selector: 'app-post-api',
   standalone: true,
-  imports: [FormsModule, JsonPipe, CommonModule, AlertComponent],
+  imports: [FormsModule, JsonPipe, CommonModule, AlertComponent, MyButtonComponent],
   templateUrl: './post-api.component.html',
   styleUrl: './post-api.component.css'
 })
@@ -29,6 +30,9 @@ export class PostApiComponent implements OnInit {
 
   ngOnInit(): void {
     this.getDepartment();
+  }
+  getData(data:any){
+    console.log(data);
   }
   onEdit(data: any) {
     this.deptObj = { ...data };
