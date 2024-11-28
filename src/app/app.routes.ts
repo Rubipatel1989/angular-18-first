@@ -11,6 +11,7 @@ import { GetApiComponent } from './components/api-integration/get-api/get-api.co
 import { PostApiComponent } from './components/api-integration/post-api/post-api.component';
 import { LifecycleEventComponent } from './components/lifecycle-event/lifecycle-event.component';
 import { NgTemplateComponent } from './components/directive/ng-template/ng-template.component';
+import { NgContainerComponent } from './components/directive/ng-container/ng-container.component';
 export const routes: Routes = [
        {
               path: 'login',
@@ -39,6 +40,10 @@ export const routes: Routes = [
        {
               path: 'ng-template',
               component: NgTemplateComponent
+       },
+       {
+              path: 'ng-container',
+              component: NgContainerComponent
        },
        {
               path: 'attributedirective',
