@@ -10,6 +10,7 @@ import { PipeComponent } from './pipe/pipe.component';
 import { GetApiComponent } from './components/api-integration/get-api/get-api.component';
 import { PostApiComponent } from './components/api-integration/post-api/post-api.component';
 import { LifecycleEventComponent } from './components/lifecycle-event/lifecycle-event.component';
+import { NgTemplateComponent } from './components/directive/ng-template/ng-template.component';
 export const routes: Routes = [
        {
               path: 'login',
@@ -34,6 +35,10 @@ export const routes: Routes = [
        {
               path: 'structural-dir',
               component: StructuralDirComponent
+       },
+       {
+              path: 'ng-template',
+              component: NgTemplateComponent
        },
        {
               path: 'attributedirective',

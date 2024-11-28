@@ -11,27 +11,22 @@
     </button>
     <div class="collapse navbar-collapse" id="mynavbar">
       <ul class="navbar-nav me-auto">
-        <li class="nav-item" style="margin-top: -12px">
+        <li class="nav-item" >
           <a class="nav-link active" routerLink="/login">Login</a>
         </li>
-        <li class="nav-item" style="margin-top: -12px">
+        <li class="nav-item" >
           <a class="nav-link active" routerLink="/register">Register</a>
         </li>
-        <li class="nav-item" style="margin-top: -12px">
-          <a class="nav-link" routerLink="structural-dir">Structural Directive</a>
-        </li>
-        <li class="nav-item" style="margin-top: -12px">
-          <a class="nav-link" routerLink="attributedirective">Attribute Directive</a>
-        </li>
-        <li class="nav-item" style="margin-top: -12px">
+
+        <li class="nav-item" >
           <a class="nav-link" routerLink="pipe">Pipe</a>
         </li>
-        <li class="nav-item" style="margin-top: -12px">
+        <li class="nav-item" >
           <a class="nav-link" routerLink="life-cycle">Life Cycle Event</a>
         </li>
-        
+
         <!-- API-Http Client Dropdown Menu -->
-        <li class="nav-item dropdown" style="margin-top: -12px">
+        <li class="nav-item dropdown" >
           <a
             class="nav-link dropdown-toggle"
             href="#"
@@ -45,8 +40,28 @@
           <ul class="dropdown-menu" aria-labelledby="apiDropdown">
             <li><a class="dropdown-item" routerLink="get-api">Get API</a></li>
             <li><a class="dropdown-item" routerLink="post-api">Post API</a></li>
+            <li><a class="dropdown-item" routerLink="ng-template">Post API</a></li>
           </ul>
         </li>
+        <li class="nav-item dropdown">
+          <a
+            class="nav-link dropdown-toggle"
+            href="#"
+            id="directiveDropdown"
+            role="button"
+            data-bs-toggle="dropdown"
+            aria-expanded="false"
+          >
+            Directive
+          </a>
+          <ul class="dropdown-menu" aria-labelledby="directiveDropdown">
+            <li><a class="dropdown-item" routerLink="structural-dir">Structural Directive</a></li>
+            <li><a class="dropdown-item" routerLink="attributedirective">Attribute Directive</a></li>
+            <li><a class="dropdown-item" routerLink="ng-template">NG Template</a></li>
+          </ul>
+        </li>
+        
+        
       </ul>
       <form class="d-flex">
         <input class="form-control me-2" type="text" placeholder="Search" />
