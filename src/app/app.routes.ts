@@ -12,6 +12,7 @@ import { PostApiComponent } from './components/api-integration/post-api/post-api
 import { LifecycleEventComponent } from './components/lifecycle-event/lifecycle-event.component';
 import { NgTemplateComponent } from './components/directive/ng-template/ng-template.component';
 import { NgContainerComponent } from './components/directive/ng-container/ng-container.component';
+import { ViewChildComponent } from './components/decorator/view-child/view-child.component';
 export const routes: Routes = [
        {
               path: 'login',
@@ -44,6 +45,10 @@ export const routes: Routes = [
        {
               path: 'ng-container',
               component: NgContainerComponent
+       },
+       {
+              path: 'view-child',
+              component: ViewChildComponent
        },
        {
               path: 'attributedirective',
