@@ -54,6 +54,6 @@ To get more help on the Angular CLI use `ng help` or go check out the [Angular C
 
 ## Study Points
 
-https://www.youtube.com/watch?v=1hkQ0J2P_ZE&list=PL7JmcZV0UQtUxsHS8dF3EINHdoIvRS6Ft&index=29
+https://www.youtube.com/watch?v=1hkQ0J2P_ZE&list=PL7JmcZV0UQtUxsHS8dF3EINHdoIvRS6Ft&index=30
 
-01.07git .26:00
+01.07
