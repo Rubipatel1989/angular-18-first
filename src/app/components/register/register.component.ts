@@ -2,6 +2,7 @@ import { Component, AfterViewInit, ElementRef, ViewChild } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { CommonModule, JsonPipe } from '@angular/common';
 import { gsap } from 'gsap';
+import { Constant } from '../../constant/Constant';
 
 @Component({
   selector: 'app-register',
@@ -16,12 +17,15 @@ export class RegisterComponent implements AfterViewInit {
   registerObj: any = {
     name: '',
     email: '',
+    gender:'',
     password: '',
     confirmPassword: ''
   };
   successMessage: string = '';
   errorMessage: string = '';
   formValue: any;
+
+  genderValues: any = Constant.GENDER;
 
   ngAfterViewInit() {
     // Animate the form elements
@@ -65,6 +69,7 @@ export class RegisterComponent implements AfterViewInit {
     this.registerObj = {
       name: '',
       email: '',
+      gender:'',
       password: '',
       confirmPassword: ''
     };

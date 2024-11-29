@@ -1,5 +1,6 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
+import { Constant } from '../constant/Constant';
 
 @Injectable({
   providedIn: 'root'
@@ -7,21 +8,21 @@ import { Injectable } from '@angular/core';
 export class DepartmentService {
 
   constructor(private http: HttpClient) { }
-  apiUrl: String = "https://projectapi.gerasim.in/api/Complaint/";
+
   getAllDept() {
-    return this.http.get(this.apiUrl + "GetParentDepartment");
+    return this.http.get(Constant.API_URL + Constant.DEPARTMENT_METHODS.GET_PARENT_DEPARTMENT);
   }
   saveNewDepartment(obj: any) {
-    return this.http.post(`${this.apiUrl}AddNewDepartment`, obj);
+    return this.http.post(`${Constant.API_URL}${Constant.DEPARTMENT_METHODS.ADD_NEW_DEPARTMENT}`, obj);
   }
   upadteNewDepartment(obj: any) {
-    return this.http.post(`${this.apiUrl}UpdateDepartment`, obj);
+    return this.http.post(`${Constant.API_URL}${Constant.DEPARTMENT_METHODS.UPDATE_DEPARTMENT}`, obj);
   }
   deleteDepartment(departmentId: number) {
-    return this.http.delete(`${this.apiUrl}DeletedepartmentBydepartmentId?departmentId=` + departmentId);
+    return this.http.delete(`${Constant.API_URL}DeletedepartmentBydepartmentId?departmentId=` + departmentId);
   }
 
-  addTwoNo(num1:number, num2:number){
+  addTwoNo(num1: number, num2: number) {
     return num1 + num2;
   }
 }
