@@ -15,6 +15,7 @@ import { NgContainerComponent } from './components/directive/ng-container/ng-con
 import { ViewChildComponent } from './components/decorator/view-child/view-child.component';
 import { LayoutComponent } from './components/layout/layout.component';
 import { authGuard } from './service/auth.guard';
+import { SignalComponent } from './components/signal/signal.component';
 export const routes: Routes = [
        {
               path: '', //Default Route
@@ -91,6 +92,11 @@ export const routes: Routes = [
                      {
                             path: 'life-cycle',
                             component: LifecycleEventComponent,
+                            canActivate:[authGuard]
+                     },
+                     {
+                            path: 'signal',
+                            component: SignalComponent,
                             canActivate:[authGuard]
                      }
               ]

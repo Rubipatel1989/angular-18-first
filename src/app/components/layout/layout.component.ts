@@ -16,7 +16,6 @@ export class LayoutComponent {
     if (loggedData != null) {
       this.loggedUserData = JSON.parse(loggedData);
     }
-    console.log('Manoj', loggedData);
   }
   logOut() {
     localStorage.removeItem('loginUser');
