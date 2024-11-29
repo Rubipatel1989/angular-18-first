@@ -6,6 +6,7 @@ import gsap from 'gsap';
 import { DepartmentService } from '../../../service/department.service';
 import { AlertComponent } from '../../../reusableComponent/alert/alert.component';
 import { MyButtonComponent } from "../../../reusableComponent/my-button/my-button.component";
+import { Department, IDepartmentList } from '../../../model/class/Customer';
 @Component({
   selector: 'app-post-api',
   standalone: true,
@@ -14,42 +15,26 @@ import { MyButtonComponent } from "../../../reusableComponent/my-button/my-butto
   styleUrl: './post-api.component.css'
 })
 export class PostApiComponent implements OnInit {
-  departmentList: any[] = [];
+  departmentList: IDepartmentList[] = [];
 
-  deptObj: any = {
-    "departmentId": 0,
-    "departmentName": "",
-    "departmentLogo": ""
-  }
+  deptObj: Department = new Department();
   http = inject(HttpClient);
 
   constructor(private deptSrv: DepartmentService) {
-    const result = this.deptSrv.addTwoNo(1,2);
+    const result = this.deptSrv.addTwoNo(1, 2);
     console.log('Pawan', result);
   }
 
   ngOnInit(): void {
     this.getDepartment();
   }
-  getData(data:any){
+  getData(data: any) {
     console.log(data);
   }
   onEdit(data: any) {
     this.deptObj = { ...data };
     this.animateRow(data.departmentId, 'edit');
   }
-  // onSave() {
-  //   this.http.post("https://projectapi.gerasim.in/api/Complaint/AddNewDepartment", this.deptObj).subscribe((result: any) => {
-  //     if (result.result) {
-  //       console.log('Success');
-  //       this.getDepartment();
-  //       this.animateGridEffect('add');
-  //     } else {
-  //       alert(result.message);
-  //       console.log('Fail');
-  //     }
-  //   })
-  // }
 
   onSave() {
     this.deptSrv.saveNewDepartment(this.deptObj).subscribe((result: any) => {

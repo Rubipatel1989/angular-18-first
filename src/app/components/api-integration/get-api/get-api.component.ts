@@ -2,6 +2,8 @@ import { HttpClient } from '@angular/common/http';
 import { Component } from '@angular/core';
 import { AlertComponent } from '../../../reusableComponent/alert/alert.component';
 import { MyButtonComponent } from "../../../reusableComponent/my-button/my-button.component";
+import { Customer } from '../../../model/class/Customer';
+import { IUser } from '../../../model/interface/IUser';
 
 @Component({
   selector: 'app-get-api',
@@ -11,9 +13,9 @@ import { MyButtonComponent } from "../../../reusableComponent/my-button/my-butto
   styleUrl: './get-api.component.css'
 })
 export class GetApiComponent {
-  userList: any[] = [];
-  customerList: any[] = [];
-  alertMsg :String = 'This is Dummy Data';
+  userList: IUser[] = [];
+  customerList: Customer[] = [];
+  alertMsg: String = 'This is Dummy Data';
   constructor(private http: HttpClient) {
     //this.getAllUser();
   }
@@ -37,7 +39,7 @@ export class GetApiComponent {
       //debugger;
     });
   }
-  changeMsg(){
+  changeMsg() {
     this.alertMsg = 'This is Get API'
   }
 }
