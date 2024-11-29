@@ -48,9 +48,11 @@ To get more help on the Angular CLI use `ng help` or go check out the [Angular C
 	ng s --port 4209
 10. Create Service
 	ng g s department
-	
+11. Create Gaurd
+	ng g g auth
+12.
 
 ## Study Points
 
-https://www.youtube.com/watch?v=AWwSHPgvvEk&list=PL7JmcZV0UQtUxsHS8dF3EINHdoIvRS6Ft&index=24
-01:00
+https://www.youtube.com/watch?v=z1jGesUp9Cw&list=PL7JmcZV0UQtUxsHS8dF3EINHdoIvRS6Ft&index=26
+0.30:00

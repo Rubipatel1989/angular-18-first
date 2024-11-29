@@ -14,6 +14,7 @@ import { NgTemplateComponent } from './components/directive/ng-template/ng-templ
 import { NgContainerComponent } from './components/directive/ng-container/ng-container.component';
 import { ViewChildComponent } from './components/decorator/view-child/view-child.component';
 import { LayoutComponent } from './components/layout/layout.component';
+import { authGuard } from './service/auth.guard';
 export const routes: Routes = [
        {
               path: '', //Default Route
@@ -34,31 +35,38 @@ export const routes: Routes = [
                      },
                      {
                             path: 'data-binding',
-                            component: DataBindingComponent
+                            component: DataBindingComponent,
+                            canActivate: [authGuard]
                      },
                      {
                             path: 'add-emp',
-                            component: AddEmployeeComponent
+                            component: AddEmployeeComponent,
+                            canActivate:[authGuard]
                      },
                      {
                             path: 'emp-list',
-                            component: EmployeeListComponent
+                            component: EmployeeListComponent,
+                            canActivate:[authGuard]
                      },
                      {
                             path: 'structural-dir',
-                            component: StructuralDirComponent
+                            component: StructuralDirComponent,
+                            canActivate:[authGuard]
                      },
                      {
                             path: 'ng-template',
-                            component: NgTemplateComponent
+                            component: NgTemplateComponent,
+                            canActivate:[authGuard]
                      },
                      {
                             path: 'ng-container',
-                            component: NgContainerComponent
+                            component: NgContainerComponent,
+                            canActivate:[authGuard]
                      },
                      {
                             path: 'view-child',
-                            component: ViewChildComponent
+                            component: ViewChildComponent,
+                            canActivate:[authGuard]
                      },
                      {
                             path: 'attributedirective',
@@ -66,20 +74,24 @@ export const routes: Routes = [
                      },
                      {
                             path: 'pipe',
-                            component: PipeComponent
+                            component: PipeComponent,
+                            canActivate:[authGuard]
                      },
                      {
                             path: 'get-api',
-                            component: GetApiComponent
+                            component: GetApiComponent,
+                            canActivate:[authGuard]
 
                      },
                      {
                             path: 'post-api',
-                            component: PostApiComponent
+                            component: PostApiComponent,
+                            canActivate:[authGuard]
                      },
                      {
                             path: 'life-cycle',
-                            component: LifecycleEventComponent
+                            component: LifecycleEventComponent,
+                            canActivate:[authGuard]
                      }
               ]
        },

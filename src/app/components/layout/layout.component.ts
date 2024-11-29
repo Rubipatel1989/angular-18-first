@@ -1,17 +1,24 @@
 import { Component, inject } from '@angular/core';
-import { Router, RouterOutlet } from '@angular/router';
+import { Router, RouterLink, RouterOutlet } from '@angular/router';
 
 @Component({
   selector: 'app-layout',
   standalone: true,
-  imports: [RouterOutlet],
+  imports: [RouterOutlet, RouterLink],
   templateUrl: './layout.component.html',
   styleUrl: './layout.component.css'
 })
 export class LayoutComponent {
   router = inject(Router);
-
-  logOut(){
+  loggedUserData: any;
+  constructor() {
+    const loggedData = localStorage.getItem('loginUser');
+    if (loggedData != null) {
+      this.loggedUserData = JSON.parse(loggedData);
+    }
+    console.log('Manoj', loggedData);
+  }
+  logOut() {
     localStorage.removeItem('loginUser');
     this.router.navigateByUrl('login');
   }

@@ -3,6 +3,7 @@ import { FormsModule } from '@angular/forms';
 import { CommonModule } from '@angular/common';
 import { gsap } from 'gsap';
 import { Router } from '@angular/router';
+import { HttpClient } from '@angular/common/http';
 
 @Component({
   selector: 'app-login',
@@ -17,9 +18,12 @@ export class LoginComponent implements AfterViewInit {
   errorMessage: string = '';
   formValue: any;
   userObj: any = {
-    userName: '',
+    emailId: '',
     password: ''
   }
+
+  router = inject(Router);
+  http = inject(HttpClient);
 
   ngAfterViewInit() {
     // Animate the form elements
@@ -48,14 +52,17 @@ export class LoginComponent implements AfterViewInit {
       delay: 1.5
     });
   }
-  router = inject(Router);
+
   onLogin() {
-    if (this.userObj.userName == 'pawan.k@exeire.com' && this.userObj.password == 'Bsa@123456') {
-      localStorage.setItem('loginUser',this.userObj.userName);
-      this.router.navigateByUrl('pipe');
-    } else {
-      this.errorMessage = 'Please fill out all required fields.';
-      return;
-    }
+    this.http.post("https://projectapi.gerasim.in/api/UserApp/login", this.userObj).subscribe((result: any) => {
+      if (result.result) {
+        localStorage.setItem('loginUser', JSON.stringify(result.data));
+        this.router.navigateByUrl('pipe');
+      } else {
+        this.errorMessage = 'Please fill out all required fields.';
+        return;
+      }
+    })
+
   }
 }
