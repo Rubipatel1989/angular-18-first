@@ -13,63 +13,76 @@ import { LifecycleEventComponent } from './components/lifecycle-event/lifecycle-
 import { NgTemplateComponent } from './components/directive/ng-template/ng-template.component';
 import { NgContainerComponent } from './components/directive/ng-container/ng-container.component';
 import { ViewChildComponent } from './components/decorator/view-child/view-child.component';
+import { LayoutComponent } from './components/layout/layout.component';
 export const routes: Routes = [
+       {
+              path: '', //Default Route
+              redirectTo: 'login',
+              pathMatch: 'full'
+       },
        {
               path: 'login',
               component: LoginComponent
        },
        {
-              path: 'register',
-              component: RegisterComponent
-       },
-       {
-              path: 'data-binding',
-              component: DataBindingComponent
-       },
-       {
-              path: 'add-emp',
-              component: AddEmployeeComponent
-       },
-       {
-              path: 'emp-list',
-              component: EmployeeListComponent
-       },
-       {
-              path: 'structural-dir',
-              component: StructuralDirComponent
-       },
-       {
-              path: 'ng-template',
-              component: NgTemplateComponent
-       },
-       {
-              path: 'ng-container',
-              component: NgContainerComponent
-       },
-       {
-              path: 'view-child',
-              component: ViewChildComponent
-       },
-       {
-              path: 'attributedirective',
-              component: AttributeDirectiveComponent
-       },
-       {
-              path: 'pipe',
-              component: PipeComponent
-       },
-       {
-              path: 'get-api',
-              component: GetApiComponent
+              path: '',
+              component: LayoutComponent,
+              children: [
+                     {
+                            path: 'register',
+                            component: RegisterComponent
+                     },
+                     {
+                            path: 'data-binding',
+                            component: DataBindingComponent
+                     },
+                     {
+                            path: 'add-emp',
+                            component: AddEmployeeComponent
+                     },
+                     {
+                            path: 'emp-list',
+                            component: EmployeeListComponent
+                     },
+                     {
+                            path: 'structural-dir',
+                            component: StructuralDirComponent
+                     },
+                     {
+                            path: 'ng-template',
+                            component: NgTemplateComponent
+                     },
+                     {
+                            path: 'ng-container',
+                            component: NgContainerComponent
+                     },
+                     {
+                            path: 'view-child',
+                            component: ViewChildComponent
+                     },
+                     {
+                            path: 'attributedirective',
+                            component: AttributeDirectiveComponent
+                     },
+                     {
+                            path: 'pipe',
+                            component: PipeComponent
+                     },
+                     {
+                            path: 'get-api',
+                            component: GetApiComponent
 
+                     },
+                     {
+                            path: 'post-api',
+                            component: PostApiComponent
+                     },
+                     {
+                            path: 'life-cycle',
+                            component: LifecycleEventComponent
+                     }
+              ]
        },
-       {
-              path: 'post-api',
-              component: PostApiComponent
-       },
-       {
-              path: 'life-cycle',
-              component: LifecycleEventComponent
-       }
-      
+
+
 ];

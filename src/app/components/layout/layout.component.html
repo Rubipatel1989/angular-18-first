@@ -1,0 +1,90 @@
+<nav class="navbar navbar-expand-sm navbar-dark bg-dark">
+       <div class="container-fluid">
+         <a class="navbar-brand" href="javascript:void(0)">Logo</a>
+         <button
+           class="navbar-toggler"
+           type="button"
+           data-bs-toggle="collapse"
+           data-bs-target="#mynavbar"
+         >
+           <span class="navbar-toggler-icon"></span>
+         </button>
+         <div class="collapse navbar-collapse" id="mynavbar">
+           <ul class="navbar-nav me-auto">             
+             <li class="nav-item" >
+               <a class="nav-link active" routerLink="/register">Register</a>
+             </li>
+     
+             <li class="nav-item" >
+               <a class="nav-link" routerLink="pipe">Pipe</a>
+             </li>
+             <li class="nav-item" >
+               <a class="nav-link" routerLink="life-cycle">Life Cycle Event</a>
+             </li>
+     
+             <!-- API-Http Client Dropdown Menu -->
+             <li class="nav-item dropdown" >
+               <a
+                 class="nav-link dropdown-toggle"
+                 href="#"
+                 id="apiDropdown"
+                 role="button"
+                 data-bs-toggle="dropdown"
+                 aria-expanded="false"
+               >
+                 API-Http Client
+               </a>
+               <ul class="dropdown-menu" aria-labelledby="apiDropdown">
+                 <li><a class="dropdown-item" routerLink="get-api">Get API</a></li>
+                 <li><a class="dropdown-item" routerLink="post-api">Post API</a></li>
+                 <li><a class="dropdown-item" routerLink="ng-template">Post API</a></li>
+               </ul>
+             </li>
+             <li class="nav-item dropdown">
+               <a
+                 class="nav-link dropdown-toggle"
+                 href="#"
+                 id="directiveDropdown"
+                 role="button"
+                 data-bs-toggle="dropdown"
+                 aria-expanded="false"
+               >
+                 Directive
+               </a>
+               <ul class="dropdown-menu" aria-labelledby="directiveDropdown">
+                 <li><a class="dropdown-item" routerLink="structural-dir">Structural Directive</a></li>
+                 <li><a class="dropdown-item" routerLink="attributedirective">Attribute Directive</a></li>
+                 <li><a class="dropdown-item" routerLink="ng-template">NG Template</a></li>
+                 <li><a class="dropdown-item" routerLink="ng-container">NG Container</a></li>
+               </ul>
+             </li>
+             <li class="nav-item dropdown">
+               <a
+                 class="nav-link dropdown-toggle"
+                 href="#"
+                 id="decoratorDropdown"
+                 role="button"
+                 data-bs-toggle="dropdown"
+                 aria-expanded="false"
+               >
+                 Decorator
+               </a>
+               <ul class="dropdown-menu" aria-labelledby="decoratorDropdown">
+                 <li><a class="dropdown-item" routerLink="view-child">View Child</a></li>
+               </ul>
+             </li>
+             
+             
+           </ul>
+           <form class="d-flex">
+             <!-- <input class="form-control me-2" type="text" placeholder="Search" /> -->
+             <button class="btn btn-primary" type="button" (click)="logOut()">Logout</button>
+           </form>
+         </div>
+       </div>
+     </nav>
+     
+     <div class="container">
+       <router-outlet></router-outlet>
+     </div>
+     

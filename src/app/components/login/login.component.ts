@@ -1,7 +1,8 @@
-import { Component, AfterViewInit, ElementRef, ViewChild } from '@angular/core';
+import { Component, AfterViewInit, ElementRef, ViewChild, inject } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { CommonModule } from '@angular/common';
 import { gsap } from 'gsap';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-login',
@@ -13,10 +14,12 @@ import { gsap } from 'gsap';
 export class LoginComponent implements AfterViewInit {
   @ViewChild('formContainer', { static: true }) formContainer!: ElementRef;
 
-  email: string = '';
-  password: string = '';
   errorMessage: string = '';
   formValue: any;
+  userObj: any = {
+    userName: '',
+    password: ''
+  }
 
   ngAfterViewInit() {
     // Animate the form elements
@@ -45,16 +48,14 @@ export class LoginComponent implements AfterViewInit {
       delay: 1.5
     });
   }
-
+  router = inject(Router);
   onLogin() {
-    this.formValue = { email: this.email, password: this.password };
-
-    if (!this.email || !this.password) {
+    if (this.userObj.userName == 'pawan.k@exeire.com' && this.userObj.password == 'Bsa@123456') {
+      localStorage.setItem('loginUser',this.userObj.userName);
+      this.router.navigateByUrl('pipe');
+    } else {
       this.errorMessage = 'Please fill out all required fields.';
       return;
     }
-
-    // Example login logic or API call
-    console.log("Login Data Submitted", this.formValue);
   }
 }
