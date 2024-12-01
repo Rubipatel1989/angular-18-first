@@ -10,7 +10,7 @@ import { Department, IDepartmentList } from '../../../model/class/Customer';
 @Component({
   selector: 'app-post-api',
   standalone: true,
-  imports: [FormsModule, JsonPipe, CommonModule, AlertComponent, MyButtonComponent],
+  imports: [FormsModule, CommonModule, AlertComponent, MyButtonComponent],
   templateUrl: './post-api.component.html',
   styleUrl: './post-api.component.css'
 })
