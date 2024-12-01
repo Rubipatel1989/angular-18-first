@@ -80,7 +80,7 @@
            </ul>
            <form class="d-flex">
              <!-- <input class="form-control me-2" type="text" placeholder="Search" /> -->
-              <select class="form-control">
+              <select class="form-control" name="selectedRole" [(ngModel)]="selectedRole" (ngModelChange)="onRoleChange($event)">
                 <option value="">Select Role</option>
                 <option value="user">User Role</option>
                 <option value="guest">Guest Role</option>

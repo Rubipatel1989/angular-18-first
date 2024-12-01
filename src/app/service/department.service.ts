@@ -1,6 +1,7 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Constant } from '../constant/Constant';
+import { Subject } from 'rxjs';
 
 @Injectable({
   providedIn: 'root'
@@ -8,6 +9,8 @@ import { Constant } from '../constant/Constant';
 export class DepartmentService {
 
   constructor(private http: HttpClient) { }
+
+  public onRoleChange$: Subject<string> = new Subject<string>;
 
   getAllDept() {
     return this.http.get(Constant.API_URL + Constant.DEPARTMENT_METHODS.GET_PARENT_DEPARTMENT);
