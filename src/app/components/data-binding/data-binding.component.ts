@@ -9,13 +9,13 @@ import { FormsModule } from '@angular/forms';
   styleUrl: './data-binding.component.css'
 })
 export class DataBindingComponent {
-  courseName: String = 'Python';
+  courseName: string = 'Python';
   inputType = "checkbox";
-  rollNo: Number = 123;
+  rollNo: number = 123;
   isIndian: boolean = true;
   currentDate: Date = new Date();
-  myClassName: String = "bg-danger";
-  stateName:String = "Uttar Pradesh";
+  myClassName: string = "bg-danger";
+  stateName:string = "Uttar Pradesh";
   firstName = signal("Pawan Kumar");
 
   constructor() {

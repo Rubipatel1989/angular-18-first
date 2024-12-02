@@ -1,9 +1,9 @@
 export class Customer {
-       userId: Number;
-       userName: String;
-       emailId: String;
-       fullName: String;
-       role: String;
+       userId: number;
+       userName: string;
+       emailId: string;
+       fullName: string;
+       role: string;
        address?: String;
 
 
@@ -17,9 +17,9 @@ export class Customer {
 }
 
 export class Department {
-       departmentId: Number;
-       departmentName: String;
-       departmentLogo: String;
+       departmentId: number;
+       departmentName: string;
+       departmentLogo: string;
 
 
        constructor() {
@@ -29,8 +29,8 @@ export class Department {
        }
 }
 export interface IDepartmentList {
-       departmentId: Number,
-       departmentName: String,
-       departmentLogo: String,
+       departmentId: number,
+       departmentName: string,
+       departmentLogo: string,
 
 }
