@@ -17,7 +17,6 @@ export class SignalComponent {
 
   constructor() {
     const fName = this.firstName();
-    console.log('Pawan', fName)
     setTimeout(() => {
       this.firstName.set('Radhe Kaka');
       this.courseName = 'Python';

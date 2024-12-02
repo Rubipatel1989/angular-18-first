@@ -25,7 +25,6 @@ export class GetApiComponent {
     this.http.get("https://jsonplaceholder.typicode.com/users").subscribe((result: any) => {
       //debugger;
       this.userList = result;
-      console.log('Pawan', this.userList);
     });
   }
 

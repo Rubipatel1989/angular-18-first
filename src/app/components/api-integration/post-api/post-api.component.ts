@@ -22,7 +22,6 @@ export class PostApiComponent implements OnInit {
 
   constructor(private deptSrv: DepartmentService) {
     const result = this.deptSrv.addTwoNo(1, 2);
-    console.log('Pawan', result);
   }
 
   ngOnInit(): void {
