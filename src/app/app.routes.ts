@@ -98,6 +98,11 @@ export const routes: Routes = [
                             path: 'signal',
                             component: SignalComponent,
                             canActivate:[authGuard]
+                     },
+                     {
+                            path: 'add-emp',
+                            component: AddEmployeeComponent,
+                            canActivate:[authGuard]
                      }
               ]
        },
