@@ -50,9 +50,10 @@ To get more help on the Angular CLI use `ng help` or go check out the [Angular C
 	ng g s department
 11. Create Gaurd
 	ng g g auth
-12.
+12. Create Environments
+	ng g environments
 
 ## Study Points
 
-https://www.youtube.com/watch?v=IZgQgSaaoHY&list=PL7JmcZV0UQtUxsHS8dF3EINHdoIvRS6Ft&index=30
-02:27
+https://www.youtube.com/watch?v=WWuRp0Lu1Co&list=PL7JmcZV0UQtUxsHS8dF3EINHdoIvRS6Ft&index=31
+11:50
